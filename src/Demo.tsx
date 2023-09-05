@@ -1,7 +1,7 @@
 import 'react-calendar/dist/Calendar.css';
 
 import { Chat, ChatWindow, Launcher, RuntimeAPIProvider, SessionStatus, SystemResponse, TurnType, UserResponse } from '@voiceflow/react-chat';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { match } from 'ts-pattern';
 
 import { LiveAgentStatus } from './components/LiveAgentStatus.component';
@@ -22,6 +22,12 @@ export const Demo: React.FC = () => {
   const { runtime } = useContext(RuntimeContext)!;
   const liveAgent = useLiveAgent();
 
+  //Added useEffect to automatically open the chat window
+  useEffect(() => {
+    handleLaunch();
+   }, []);
+  
+    
   const handleLaunch = async () => {
     setOpen(true);
     await runtime.launch();

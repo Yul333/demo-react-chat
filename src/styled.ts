@@ -1,11 +1,11 @@
 import { styled } from 'styled-components';
 
 export const DemoContainer = styled.div({
-  position: 'absolute',
-  right: '1rem',
-  top: '3rem',
-  bottom: '3rem',
-  width: '400px',
+  position: 'relative',
+  // right: '1rem',
+  // top: '3rem',
+  // bottom: '3rem',
+  width: '100%',
   border: '1px solid #ddd',
   borderRadius: '8px',
   overflowX: 'hidden',
