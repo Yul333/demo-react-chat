@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import { createGlobalStyle, styled } from 'styled-components';
 
 // eslint-disable-next-line import/no-absolute-path
 import background from '/images/background.png';
@@ -20,13 +20,24 @@ export const DemoContainer = styled.div({
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
 
-  '@media (max-width: 768px)': {
-    position: 'fixed',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    border: 0,
-    borderRadius: 0,
-  },
+  // '@media (max-width: 768px)': {
+  //   position: 'fixed',
+  //   top: 0,
+  //   bottom: 0,
+  //   left: 0,
+  //   right: 0,
+  //   border: 0,
+  //   borderRadius: 0,
+  // },
 });
+export const GlobalStyle = createGlobalStyle`
+  .c-iLVmPU {
+    background-color: transparent !important;
+  }
+  .vfrc-chat {
+    background-color: transparent !important;
+  }
+  .vfrc-chat--dialog {
+    background-color: transparent !important;
+  }
+`;

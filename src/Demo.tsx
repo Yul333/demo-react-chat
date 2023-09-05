@@ -10,7 +10,7 @@ import { RuntimeContext } from './context';
 import { CustomMessage } from './custom-message.enum';
 import { CalendarMessage } from './messages/CalendarMessage.component';
 import { VideoMessage } from './messages/VideoMessage.component';
-import { DemoContainer } from './styled';
+import { DemoContainer, GlobalStyle } from './styled';
 import { useLiveAgent } from './use-live-agent.hook';
 
 // const IMAGE = 'https://picsum.photos/seed/1/200/300';
@@ -61,18 +61,19 @@ export const Demo: React.FC = () => {
   }
 
   return (
-    <DemoContainer>
+    <>
+      <GlobalStyle />
+      <DemoContainer>
       <ChatWindow.Container>
         <RuntimeAPIProvider {...runtime}>
           <Chat
             /*     title="My Assistant"
             description="welcome to my assistant"
-            image={IMAGE} 
+            image={IMAGE}
             avatar={AVATAR}
-           
-            startTime={runtime.session.startTime}*/
-
-             withWatermark
+            
+            startTime={runtime.session.startTime} */
+            withWatermark
             hasEnded={runtime.isStatus(SessionStatus.ENDED)}
             isLoading={!runtime.session.turns.length}
             onStart={runtime.launch}
@@ -81,28 +82,24 @@ export const Demo: React.FC = () => {
             onMinimize={handleEnd}
           >
             {liveAgent.isEnabled && <LiveAgentStatus talkToRobot={liveAgent.talkToRobot} />}
-            {runtime.session.turns.map((turn, turnIndex) =>
-              match(turn)
-                .with({ type: TurnType.USER }, ({ id, type: _, ...rest }) => <UserResponse {...rest} key={id} />)
-                .with({ type: TurnType.SYSTEM }, ({ id, type: _, ...rest }) => (
-                  <SystemResponse
-                    {...rest}
-                    key={id}
-                    Message={({ message, ...props }) =>
-                      match(message)
-                        .with({ type: CustomMessage.CALENDAR }, ({ payload: { today } }) => (
-                          <CalendarMessage {...props} value={new Date(today)} runtime={runtime} />
-                        ))
-                        .with({ type: CustomMessage.VIDEO }, ({ payload: url }) => <VideoMessage url={url} />)
-                        .with({ type: CustomMessage.STREAMED_RESPONSE }, ({ payload: { getSocket } }) => <StreamedMessage getSocket={getSocket} />)
-                        .with({ type: CustomMessage.PLUGIN }, ({ payload: { Message } }) => <Message />)
-                        .otherwise(() => <SystemResponse.SystemMessage {...props} message={message} />)
-                    }
-                    // avatar={AVATAR}
-                    isLast={turnIndex === runtime.session.turns.length - 1}
-                  />
-                ))
-                .exhaustive()
+            {runtime.session.turns.map((turn, turnIndex) => match(turn)
+              .with({ type: TurnType.USER }, ({ id, type: _, ...rest }) => <UserResponse {...rest} key={id} />)
+              .with({ type: TurnType.SYSTEM }, ({ id, type: _, ...rest }) => (
+                <SystemResponse
+                  {...rest}
+                  key={id}
+                  Message={({ message, ...props }) => match(message)
+                    .with({ type: CustomMessage.CALENDAR }, ({ payload: { today } }) => (
+                      <CalendarMessage {...props} value={new Date(today)} runtime={runtime} />
+                    ))
+                    .with({ type: CustomMessage.VIDEO }, ({ payload: url }) => <VideoMessage url={url} />)
+                    .with({ type: CustomMessage.STREAMED_RESPONSE }, ({ payload: { getSocket } }) => <StreamedMessage getSocket={getSocket} />)
+                    .with({ type: CustomMessage.PLUGIN }, ({ payload: { Message } }) => <Message />)
+                    .otherwise(() => <SystemResponse.SystemMessage {...props} message={message} />)}
+                  // avatar={AVATAR}
+                  isLast={turnIndex === runtime.session.turns.length - 1} />
+              ))
+              .exhaustive()
             )}
             {runtime.indicator && <SystemResponse.Indicator />}
             {/* {runtime.indicator && <SystemResponse.Indicator avatar={AVATAR} />} */}
@@ -110,5 +107,6 @@ export const Demo: React.FC = () => {
         </RuntimeAPIProvider>
       </ChatWindow.Container>
     </DemoContainer>
+    </>
   );
 };
