@@ -13,8 +13,8 @@ import { VideoMessage } from './messages/VideoMessage.component';
 import { DemoContainer } from './styled';
 import { useLiveAgent } from './use-live-agent.hook';
 
-const IMAGE = 'https://picsum.photos/seed/1/200/300';
-const AVATAR = 'https://picsum.photos/seed/1/80/80';
+// const IMAGE = 'https://picsum.photos/seed/1/200/300';
+// const AVATAR = 'https://picsum.photos/seed/1/80/80';
 
 export const Demo: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ export const Demo: React.FC = () => {
   const { runtime } = useContext(RuntimeContext)!;
   const liveAgent = useLiveAgent();
 
-  //Added useEffect to automatically open the chat window
+  // Added useEffect to automatically open the chat window
   useEffect(() => {
     handleLaunch();
    }, []);
@@ -65,12 +65,14 @@ export const Demo: React.FC = () => {
       <ChatWindow.Container>
         <RuntimeAPIProvider {...runtime}>
           <Chat
-            title="My Assistant"
+            /*     title="My Assistant"
             description="welcome to my assistant"
-            image={IMAGE}
+            image={IMAGE} 
             avatar={AVATAR}
-            withWatermark
-            startTime={runtime.session.startTime}
+           
+            startTime={runtime.session.startTime}*/
+
+             withWatermark
             hasEnded={runtime.isStatus(SessionStatus.ENDED)}
             isLoading={!runtime.session.turns.length}
             onStart={runtime.launch}
@@ -96,13 +98,14 @@ export const Demo: React.FC = () => {
                         .with({ type: CustomMessage.PLUGIN }, ({ payload: { Message } }) => <Message />)
                         .otherwise(() => <SystemResponse.SystemMessage {...props} message={message} />)
                     }
-                    avatar={AVATAR}
+                    // avatar={AVATAR}
                     isLast={turnIndex === runtime.session.turns.length - 1}
                   />
                 ))
                 .exhaustive()
             )}
-            {runtime.indicator && <SystemResponse.Indicator avatar={AVATAR} />}
+            {runtime.indicator && <SystemResponse.Indicator />}
+            {/* {runtime.indicator && <SystemResponse.Indicator avatar={AVATAR} />} */}
           </Chat>
         </RuntimeAPIProvider>
       </ChatWindow.Container>
