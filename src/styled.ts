@@ -9,11 +9,12 @@ export const DemoContainer = styled.div({
   // top: '3rem',
   // bottom: '3rem',
   width: '100%',
-  height: '100%',
+  height: '100vh',
   border: '1px solid #ddd',
   borderRadius: '8px',
   overflowX: 'hidden',
   overflowY: 'scroll',
+
   // backgroundImage: 'url("./images/welcome-background.png")',
 
   backgroundImage: `url(${background})`,
@@ -31,6 +32,54 @@ export const DemoContainer = styled.div({
   // },
 });
 export const GlobalStyle = createGlobalStyle`
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  width: 100px;  
+  height: auto;
+}
+
+
+
+.vfrc-header {
+
+  display: none;
+}
+.vfrc-chat{
+  max-height: calc(100vh - 8rem);
+  top: 4rem;
+}
+
+.vfrc-input {
+  border: none;
+  background: transparent;
+}
+
+.c-kIbiaN {
+  display: none !important;
+}
+
+.vfrc-widget--chat {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    max-width: none !important;
+    max-height: none !important;
+}
   .c-iLVmPU {
     background-color: transparent !important;
   }
