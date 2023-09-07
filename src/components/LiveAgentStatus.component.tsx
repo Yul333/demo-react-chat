@@ -8,7 +8,7 @@ export const LiveAgentStatus: React.FC<{ talkToRobot: () => void }> = ({ talkToR
       top: 56,
       left: 0,
       padding: 8,
-      color: 'white',
+      color: 'green',
       background: 'orangered',
       zIndex: 1,
     }}

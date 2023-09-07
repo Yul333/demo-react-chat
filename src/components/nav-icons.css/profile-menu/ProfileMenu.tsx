@@ -11,6 +11,7 @@ const ProfileMenu: React.FC = () => {
         width='26px' 
         height='26px' 
         alt='profile menu icon' 
+        color='rgb(60, 60, 60, 0.3)'
         onClick={() => setIsOpen(!isOpen)}
       />
       {isOpen && (

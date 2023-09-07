@@ -1,0 +1,32 @@
+/* 
+export const GlobalStyle = createGlobalStyle
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vfrc-widget--chat {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+  .c-iLVmPU {
+    background-color: transparent !important;
+  }
+  .vfrc-chat {
+    background-color: transparent !important;
+  }
+  .vfrc-chat--dialog {
+    background-color: transparent !important;
+  }
+; */

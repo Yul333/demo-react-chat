@@ -24,7 +24,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: animFw 3s linear infinite;
+  animation: animFw 1.5s linear infinite;
 }
 
 @keyframes animFw {

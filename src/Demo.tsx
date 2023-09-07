@@ -32,7 +32,7 @@ export const Demo: React.FC = () => {
     console.log('Is loading:', isLoading);
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 1500);
   }, []);
 
   //automatically opens chat window

@@ -32,12 +32,21 @@ export const DemoContainer = styled.div({
   // },
 });
 export const GlobalStyle = createGlobalStyle`
+@font-face {
+  font-family: 'Quincy CF Medium';
+  src: url('../build/assets/fonts/QuincyCF-Medium.ttf') format('ttf'),
+}
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    font-family: Transat W01 Medium, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Quincy CF Medium, serif;
 }
 .logo {
   position: fixed;
@@ -47,8 +56,12 @@ html, body {
   width: 100px;  
   height: auto;
 }
+
 .vfrc-header {
   display: none;
+}
+.vfrc-assistant-info{
+  display:none;
 }
 .vfrc-chat {
   max-height: calc(100vh - 8rem);
@@ -59,6 +72,7 @@ html, body {
   // align-items: center;
     text-align: left;
     padding-left: 20%;
+    padding-right: 30%;
 
 }
 .vfrc-chat--dialog {
@@ -66,14 +80,25 @@ html, body {
 }
 .vfrc-message {
   background-color:transparent;
-  width:400px;
-  max-width:400px;
+  width:500px !important;
+  max-width:500px !important;;
   color: grey;
+}
+.vfrc-message--chat{
+  width: 500px;
+ max-width:500px;
+}
+.vfrc-system-response{
+width: 500px;
+ max-width:500px;
 }
 .vfrc-input {
   border: none;
   background: transparent;
   box-shadow: none;
+}
+.vfrc-input::placeholder {
+  color: transparent;
 }
 .vfrc-input:focus {
   outline: none;
