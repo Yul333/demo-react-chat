@@ -47,46 +47,60 @@ html, body {
   width: 100px;  
   height: auto;
 }
-
-
-
 .vfrc-header {
-
   display: none;
 }
-.vfrc-chat{
+.vfrc-chat {
   max-height: calc(100vh - 8rem);
   top: 4rem;
-}
+  background-color: transparent !important;
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: center;
+    text-align: left;
+    padding-left: 20%;
 
+}
+.vfrc-chat--dialog {
+  background-color: transparent !important;
+}
+.vfrc-message {
+  background-color:transparent;
+  width:400px;
+  max-width:400px;
+  color: grey;
+}
 .vfrc-input {
   border: none;
   background: transparent;
+  box-shadow: none;
 }
-
-.c-kIbiaN {
+.vfrc-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.vfrc-timestamp {
+  display: none;
+}
+.vfrc-chat-input--button {
+  display: none;
+}
+.vfrc-avatar {
   display: none !important;
 }
-
 .vfrc-widget--chat {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    border: none !important;
-    max-width: none !important;
-    max-height: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  max-width: none !important;
+  max-height: none !important;
 }
-  .c-iLVmPU {
-    background-color: transparent !important;
-  }
-  .vfrc-chat {
-    background-color: transparent !important;
-  }
-  .vfrc-chat--dialog {
-    background-color: transparent !important;
-  }
-`;
+.vfrc-footer--watermark {
+  display: none;
+}`

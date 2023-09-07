@@ -14,8 +14,8 @@ import { CalendarMessage } from './messages/CalendarMessage.component';
 import { VideoMessage } from './messages/VideoMessage.component';
 import { DemoContainer, GlobalStyle } from './styled';
 import { useLiveAgent } from './use-live-agent.hook';
-import SettingsMenu from './components/settings-menu/SettingsMenu';
-import ProfileMenu from './components/profile-menu/ProfileMenu';
+import SettingsMenu from './components/nav-icons.css/settings-menu/SettingsMenu';
+import ProfileMenu from './components/nav-icons.css/profile-menu/ProfileMenu';
 
 const IMAGE = '/images/logo.svg';
 
@@ -133,7 +133,9 @@ export const Demo: React.FC = () => {
                     position: 'fixed',
                     right: '3rem',
                     bottom: '3rem',
-                    border: 'none',
+                      border: 'none',
+                      background: 'none',
+                     outline: 'none', 
                   }}
                 >
                   <img src='./images/noun-mute.svg' width='32px' height='32px' />
