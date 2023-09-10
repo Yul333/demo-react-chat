@@ -1,4 +1,4 @@
-import { SystemResponse } from '@voiceflow/react-chat';
+import { SystemResponse } from '../../packages/react-chat';
 import { useEffect, useMemo, useState } from 'react';
 
 export const StreamedMessage: React.FC<{ getSocket: () => WebSocket }> = ({ getSocket }) => {

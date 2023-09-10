@@ -1,4 +1,4 @@
-import { useRuntime } from '@voiceflow/react-chat';
+import { useRuntime } from '../packages/react-chat';
 import { createNanoEvents } from 'nanoevents';
 import { createContext, useMemo } from 'react';
 

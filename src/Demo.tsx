@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 import 'react-calendar/dist/Calendar.css';
 
-import { Chat, ChatWindow, Launcher, RuntimeAPIProvider, SessionStatus, SystemResponse, TurnType, UserResponse } from '@voiceflow/react-chat';
+import { Chat, ChatWindow, Launcher, RuntimeAPIProvider, SessionStatus, SystemResponse, TurnType, UserResponse } from '../packages/react-chat';
+// import { Chat, ChatWindow, Launcher, RuntimeAPIProvider, SessionStatus, SystemResponse, TurnType, UserResponse } from '@voiceflow/react-chat';
 import { useContext, useEffect, useState } from 'react';
 import { match } from 'ts-pattern';
 

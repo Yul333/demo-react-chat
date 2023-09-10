@@ -1,0 +1,9 @@
+[32m@voiceflow/widget:build[0m: cache hit, replaying output [2mcf2b07e8e90e4735[0m
+[32m@voiceflow/widget:build: [0mvite v3.2.2 building for production...
+[32m@voiceflow/widget:build: [0mtransforming...
+[32m@voiceflow/widget:build: [0m
+[32m@voiceflow/widget:build: [0m ERROR  [BABEL] Note: The code generator has deoptimised the styling of /Users/yuliakitan/Documents/GitHub/voiceflow-react-chat/packages/react-chat/build/index.es.js as it exceeds the max of 500KB.
+[32m@voiceflow/widget:build: [0m
+[32m@voiceflow/widget:build: [0m✓ 36 modules transformed.
+[32m@voiceflow/widget:build: [0mrendering chunks...
+[32m@voiceflow/widget:build: [0mdist/bundle.mjs   1187.29 KiB / gzip: 366.02 KiB

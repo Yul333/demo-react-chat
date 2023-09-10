@@ -1,5 +1,5 @@
 import { FetchClient } from '@voiceflow/fetch';
-import { TurnType, useRuntime } from '@voiceflow/react-chat';
+import { TurnType, useRuntime } from '../packages/react-chat';
 import { serializeToText } from '@voiceflow/slate-serializer/text';
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { match } from 'ts-pattern';
