@@ -6,6 +6,13 @@ const ProfileMenu: React.FC = () => {
 
   return (
     <div className="icon-container" style={{ position: 'fixed', left: '3rem', bottom: '3rem' }}>
+      {isOpen && (
+        <div className="dropdown-options">
+          <div onClick={() => setIsOpen(false)}>My Memories</div>
+          <div onClick={() => setIsOpen(false)}>My Sessions</div>
+          <div onClick={() => setIsOpen(false)}>My Biometrics</div>
+        </div>
+      )}
       <img 
         src='./images/noun-menu-profile.svg' 
         width='26px' 
@@ -14,13 +21,6 @@ const ProfileMenu: React.FC = () => {
         color='rgb(60, 60, 60, 0.3)'
         onClick={() => setIsOpen(!isOpen)}
       />
-      {isOpen && (
-        <div className="dropdown-options">
-          <div onClick={() => setIsOpen(false)}>My Memories</div>
-          <div onClick={() => setIsOpen(false)}>My Sessions</div>
-          <div onClick={() => setIsOpen(false)}>My Biometrics</div>
-        </div>
-      )}
     </div>
   );
 };

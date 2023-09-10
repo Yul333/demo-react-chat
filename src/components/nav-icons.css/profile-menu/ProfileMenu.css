@@ -1,29 +1,22 @@
 .icon-container {
   position: absolute;
-    position: fixed;
+  position: fixed;
   left: 3rem;
   bottom: 3rem;
-   
 }
 
 .dropdown-options {
-  bottom: 30px;
-  left: -2.2rem;
-  position: absolute;
-  right: 0;
-  top: auto; 
+left: -1rem;
+position: relative;
+z-index: 10px;
  width: 140px;
  max-height: 200px;
  overflow-y: auto;
-  /* background-color: #f9f9f9; */
-  /* border: 4px solid #ccc; */
-  /* border-radius: 6px; */
-   padding: 12px;  
-/*   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+ padding: 12px;  
 }
 
 .dropdown-options div {
-  padding: 2px; 
+  padding: 4px; 
   cursor: pointer;
 }
 

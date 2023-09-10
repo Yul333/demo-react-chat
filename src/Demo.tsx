@@ -82,7 +82,7 @@ export const Demo: React.FC = () => {
             {isLoading ? (
               <LoadingScreen />
             ) : (
-              <div style={{ position: 'relative' }}>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Chat
                   /*     title="My Assistant"
             description="welcome to my assistant"
@@ -96,13 +96,14 @@ export const Demo: React.FC = () => {
                   onStart={runtime.launch}
                   onEnd={handleEnd}
                   onSend={handleSend}
-                  onMinimize={handleEnd}
+                    onMinimize={handleEnd}
                 >
                   {liveAgent.isEnabled && <LiveAgentStatus talkToRobot={liveAgent.talkToRobot} />}
                   {runtime.session.turns.map((turn, turnIndex) =>
                     match(turn)
                       .with({ type: TurnType.USER }, ({ id, type: _, ...rest }) => <UserResponse {...rest} key={id} />)
                       .with({ type: TurnType.SYSTEM }, ({ id, type: _, ...rest }) => (
+                      <span  id="sdfds" style={{color: 'rgba(60, 60, 60) !important'}}>
                         <SystemResponse
                           {...rest}
                           key={id}
@@ -121,6 +122,7 @@ export const Demo: React.FC = () => {
                           // avatar={AVATAR}
                           isLast={turnIndex === runtime.session.turns.length - 1}
                         />
+                          </span>
                       ))
                       .exhaustive()
                   )}

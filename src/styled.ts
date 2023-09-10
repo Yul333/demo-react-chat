@@ -5,9 +5,6 @@ import background from '/images/background.png';
 
 export const DemoContainer = styled.div({
   position: 'relative',
-  // right: '1rem',
-  // top: '3rem',
-  // bottom: '3rem',
   width: '100%',
   height: '100vh',
   border: '1px solid #ddd',
@@ -43,10 +40,15 @@ html, body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    font-family: Transat W01 Medium, sans-serif;
+    // font-family: Transat W01 Medium, sans-serif !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: unset !important;
+    font-size: 20px !important;
+    line-height: 28px !important;
+    color: rgba(60, 60, 60, 0.7) !important;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: Quincy CF Medium, serif;
+  font-family: 'Montserrat', sans-serif !important;
 }
 .logo {
   position: fixed;
@@ -64,6 +66,8 @@ h1, h2, h3, h4, h5, h6 {
   display:none;
 }
 .vfrc-chat {
+  display: flex;
+  justify-content: center; 
   max-height: calc(100vh - 8rem);
   top: 4rem;
   background-color: transparent !important;
@@ -82,7 +86,12 @@ h1, h2, h3, h4, h5, h6 {
   background-color:transparent;
   width:500px !important;
   max-width:500px !important;;
-  color: grey;
+//  font-family: Transat W01 Medium, sans-serif !important;
+font-family: 'Montserrat', sans-serif;
+   font-weight: unset !important;
+    font-size: 20px !important;
+    line-height: 28px !important;
+    
 }
 .vfrc-message--chat{
   width: 500px;
@@ -91,6 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 .vfrc-system-response{
 width: 500px;
  max-width:500px;
+/*  color: rgba(60, 60, 60) !important; */
 }
 .vfrc-input {
   border: none;

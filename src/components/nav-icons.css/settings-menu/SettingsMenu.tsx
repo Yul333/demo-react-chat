@@ -14,6 +14,7 @@ const SettingsMenu: React.FC = () => {
         height='32px'
         alt='menu icon'
         onClick={() => setIsOpen(!isOpen)}
+        className='settings-img'
       />
       {isOpen && (
         <div className="settings-dropdown-options">
