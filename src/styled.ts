@@ -29,10 +29,10 @@ export const DemoContainer = styled.div({
   // },
 });
 export const GlobalStyle = createGlobalStyle`
-@font-face {
-  font-family: 'Quincy CF Medium';
-  src: url('../build/assets/fonts/QuincyCF-Medium.ttf') format('ttf'),
-}
+// @font-face {
+//   font-family: 'Quincy CF Medium';
+//   src: url('../build/assets/fonts/QuincyCF-Medium.ttf') format('ttf'),
+// }
 
 html, body {
     margin: 0;
@@ -41,15 +41,15 @@ html, body {
     width: 100%;
     overflow: hidden;
     // font-family: Transat W01 Medium, sans-serif !important;
-    font-family: 'Montserrat', sans-serif !important;
+    // font-family: 'Montserrat', sans-serif !important;
     font-weight: unset !important;
     font-size: 20px !important;
     line-height: 28px !important;
-    color: rgba(60, 60, 60, 0.7) !important;
+    // color: rgba(60, 60, 60, 0.7) !important;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif !important;
-}
+// h1, h2, h3, h4, h5, h6 {
+//   font-family: 'Montserrat', sans-serif !important;
+// }
 .logo {
   position: fixed;
   top: 10px;
@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   width:500px !important;
   max-width:500px !important;;
 //  font-family: Transat W01 Medium, sans-serif !important;
-font-family: 'Montserrat', sans-serif;
+// font-family: 'Montserrat', sans-serif;
    font-weight: unset !important;
     font-size: 20px !important;
     line-height: 28px !important;
@@ -102,11 +102,11 @@ width: 500px;
  max-width:500px;
 /*  color: rgba(60, 60, 60) !important; */
 }
-.vfrc-input {
-  border: none;
-  background: transparent;
-  box-shadow: none;
-}
+// .vfrc-input {
+//   border: none;
+//   background: transparent;
+//   box-shadow: none;
+// }
 .vfrc-input::placeholder {
   color: transparent;
 }

@@ -82,7 +82,7 @@
     "voiceflow"
   ],
   "license": "MIT",
-  "main": "build/index.es.js",
+  "main": "index.ts",
   "peerDependencies": {
     "react": "^18",
     "react-dom": "^18"

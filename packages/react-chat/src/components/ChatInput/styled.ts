@@ -46,7 +46,6 @@ export const Container = styled(tag('div'), {
     borderBottomRightRadius: 0,
     paddingRight: 7,
     boxShadow: 'none',
-    fontSize: '100px',
   },
 
   [`& ${ButtonContainer}`]: {

@@ -23,9 +23,9 @@ export const createPrimaryColors = (primary: string) => ({
 export const PALETTE = {
   black: 'rgba(0,0,0,0.9)',
   white: '#fff',
-  lightGrey: '#f4f4f4',
+  lightGrey: 'rgba(60, 60, 60, 0.7)',
   medGrey: '#dfdfdf',
-  darkGrey: '#737376',
+  darkGrey: 'rgba(60, 60, 60)',
   blue: PRIMARY,
   warn: WARN,
   darkWarn: chroma(WARN).darken(0.25).hex(),

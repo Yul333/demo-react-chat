@@ -7,12 +7,13 @@ const tag = tagFactory(ClassName.INPUT);
 export const inputStyles: CSS = {
   height: '$md',
   boxSizing: 'border-box',
-  border: '1px solid rgba(115,115,118,0.3)',
-  borderRadius: '$1',
-  backgroundColor: '$white',
-  boxShadow: '0 1px 12px $shadow2',
+  // border: '1px solid rgba(115,115,118,0.3)',
+  border: 'none',
+  // borderRadius: '$1',
+  // backgroundColor: '$white',
+  backgroundColor: 'transparent',
+  // boxShadow: '0 1px 12px $shadow2',
   trans: ['border-color'],
-  fontSize: '122px',
 };
 
 export const inputFocusStyles: CSS = {

@@ -1,4 +1,4 @@
-export const FAMILY = "'Open Sans', sans-serif";
+export const FAMILY = "'Montserrat', sans-serif";
 
 export const SIZES = {
   1: '13px',

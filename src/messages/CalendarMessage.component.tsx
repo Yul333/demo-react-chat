@@ -1,4 +1,4 @@
-import { Message, SystemResponse, useRuntime } from '@voiceflow/react-chat';
+import { Message, SystemResponse, useRuntime } from '../../packages/react-chat';
 import Calendar from 'react-calendar';
 
 export interface SystemMessageProps extends React.ComponentProps<(typeof SystemResponse)['SystemMessage']> {

@@ -5,20 +5,23 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-     "build": "vite build"
+    "build": "vite build"
   },
   "prettier": "@voiceflow/prettier-config",
   "dependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "@voiceflow/base-types": "^2.88.0",
     "@voiceflow/exception": "1.4.0",
     "@voiceflow/fetch": "1.5.2",
-    "@voiceflow/react-chat": "1.46.1",
-    "@voiceflow/slate-serializer": "1.4.2",
+    "@voiceflow/slate-serializer": "^1.5.4",
     "nanoevents": "8.0.0",
     "react": "18.2.0",
     "react-calendar": "4.3.0",
     "react-dom": "18.2.0",
+    "slate": "^0.94.1",
     "styled-components": "6.0.3",
-    "ts-pattern": "4.3.0"
+    "ts-pattern": "4.3.0",
+    "vite-plugin-svgr": "^3.2.0"
   },
   "devDependencies": {
     "@types/node": "20.2.5",

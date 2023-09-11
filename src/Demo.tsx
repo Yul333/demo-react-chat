@@ -104,7 +104,7 @@ export const Demo: React.FC = () => {
                     match(turn)
                       .with({ type: TurnType.USER }, ({ id, type: _, ...rest }) => <UserResponse {...rest} key={id} />)
                       .with({ type: TurnType.SYSTEM }, ({ id, type: _, ...rest }) => (
-                      <span  id="sdfds" style={{color: 'rgba(60, 60, 60) !important'}}>
+                      // <span  id="sdfds" style={{color: 'rgba(60, 60, 60) !important'}}>
                         <SystemResponse
                           {...rest}
                           key={id}
@@ -123,7 +123,7 @@ export const Demo: React.FC = () => {
                           // avatar={AVATAR}
                           isLast={turnIndex === runtime.session.turns.length - 1}
                         />
-                          </span>
+                          // </span>
                       ))
                       .exhaustive()
                   )}

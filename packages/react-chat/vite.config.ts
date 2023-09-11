@@ -12,7 +12,7 @@ export const createPlugins = (rootDir = __dirname): PluginOption[] => [
     google: {
       families: [
         {
-          name: 'Open Sans',
+          name: 'Montserrat',
           styles: 'wght@400;600',
           defer: true,
         },

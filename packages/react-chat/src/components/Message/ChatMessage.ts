@@ -6,12 +6,15 @@ export const ChatMessage = styled(tag(Container, 'chat'), {
   variants: {
     from: {
       system: {
-        color: '$black',
+        color: '$darkGrey',
+     
+      //  color:'rgba(60, 60, 60)',
         backgroundColor: '$lightGrey',
       },
 
       user: {
-        color: '$white',
+        color: '$lightGrey',
+    
         backgroundColor: '$primary',
       },
     },
